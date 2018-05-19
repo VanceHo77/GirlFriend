@@ -1,0 +1,12 @@
+.mat-icon-button{
+    line-height: 0;
+    height: 0;
+    width: 50px;
+    font-family: Microsoft JhengHei;
+    font-size: 16px;
+    color: white;
+}
+
+.mat-menu-item{
+    font-family: Microsoft JhengHei;
+}
