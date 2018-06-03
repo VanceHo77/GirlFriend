@@ -15,11 +15,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 @SpringBootApplication
 class GirlfriendApplication : SpringBootServletInitializer(), WebMvcConfigurer {
 
-    override fun configure(application: SpringApplicationBuilder): SpringApplicationBuilder =
-            application.sources(GirlfriendApplication::class.java)
-
     companion object {
-
         val jacksonMapper = ObjectMapper().registerKotlinModule()
                 .setSerializationInclusion(JsonInclude.Include.NON_ABSENT)
                 .enable(DeserializationFeature.FAIL_ON_NULL_FOR_PRIMITIVES)
