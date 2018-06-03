@@ -230,3 +230,4 @@ local.properties
 .idea/girlfriend.iml
 .idea/vcs.xml
 .idea/
+src/main/webapp/dist/
