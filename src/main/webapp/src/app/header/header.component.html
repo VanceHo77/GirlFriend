@@ -12,22 +12,7 @@
   <div id="stuck_container" class="stuck_container">
     <div class="container">
       <nav class="nav">
-        <ul data-type="navbar" class="sf-menu">
-          <li class="active">
-            <a href="javascript:void(0);">首頁</a>
-          </li>
-          <li>
-            <a href="javascript:void(0);">
-              <dropdown-menu [itemsSource]='treatmentItems'></dropdown-menu>
-            </a>
-          </li>
-          <li>
-            <a href="index-3.html">FAQS</a>
-          </li>
-          <li>
-            <a href="index-4.html">Contacts</a>
-          </li>
-        </ul>
+        <dropdown-menu [itemsSource]='treatmentItems'></dropdown-menu>
       </nav>
     </div>
   </div>
