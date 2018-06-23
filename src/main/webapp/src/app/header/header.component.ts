@@ -18,6 +18,24 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.treatmentItems = this.appService.getItemsSource();
+    this.registerScrollFixedHeaderEvent();
   }
 
+
+  private registerScrollFixedHeaderEvent() {
+    window.onscroll = function () { addFixHeaderClass() };
+
+    var header = document.getElementById("header");
+    var sticky = header.offsetTop;
+
+    function addFixHeaderClass() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  }
 }
+
+
