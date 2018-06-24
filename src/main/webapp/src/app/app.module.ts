@@ -43,6 +43,7 @@ import {
   MatTooltipModule,
   MatStepperModule,
 } from '@angular/material';
+import { OwlModule } from 'ngx-owl-carousel';
 
 @NgModule({
   exports: [
@@ -102,7 +103,9 @@ export class PlunkerMaterialModule { }
     HttpModule,
     // Router
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // Carousel
+    OwlModule
   ],
   providers: [],
   bootstrap: [AppComponent]

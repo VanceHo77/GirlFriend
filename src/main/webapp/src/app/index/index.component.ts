@@ -1,5 +1,5 @@
 import { IndexService } from './index.service';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-index',
@@ -7,26 +7,14 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./index.component.css'],
   providers: [IndexService]
 })
-export class IndexComponent implements OnInit, OnDestroy {
+export class IndexComponent implements OnInit {
 
-  public allServiceHighLights;
-  sub;
+  // TODO In the future will be modified to read the dynamically data
+  public images = ['/assets/images/index_img_01.jpg', '/assets/images/index_img_02.jpg', '/assets/images/index_img_03.jpg'];
 
   constructor(private appService: IndexService) { }
 
   ngOnInit() {
-    // this.getServiceHighLights();
   }
 
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
-
-  // getServiceHighLights() {
-  //   this.sub = this.appService.getServiceHighlights().subscribe(
-  //     data => { this.allServiceHighLights = data },
-  //     err => console.error(err),
-  //     () => console.log('done loading ServiceHighlights')
-  //   );
-  // }
 }
