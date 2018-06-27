@@ -1,10 +1,13 @@
+import { LogLevel } from "src/environments/LogLevel";
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
   production: false,
-  sourceUrl: "localhost:8080/girlfirend/api"
+  sourceUrl: "localhost:8080/girlfirend/api",
+  logLevel: LogLevel.Log
 };
 
 /*
