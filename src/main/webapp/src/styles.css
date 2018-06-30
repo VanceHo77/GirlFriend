@@ -1,4 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+/* bootstrap*/
+@import url("/assets/bootstrap-3.3/css/bootstrap.min.css");
 @import url("/assets/css/grid.css");
 @import url("/assets/css/style.css");
 /* 輪播器*/
@@ -7,6 +8,14 @@
 /* material*/
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-body{
+body {
     font-family: Microsoft JhengHei;
+}
+
+a:link, a:visited, a:hover {
+    text-decoration: none!important;
+}
+
+.btn:hover{
+  color:white;
 }

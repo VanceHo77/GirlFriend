@@ -11,6 +11,7 @@
     <ng-template #case2>
         <button mat-button [matMenuTriggerFor]="menu">
             {{topic.name}}
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
         </button>
         <mat-menu #menu="matMenu" [overlapTrigger]="false">
             <button mat-menu-item *ngFor="let item of topic.items">
