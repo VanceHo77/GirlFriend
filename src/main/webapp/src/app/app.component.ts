@@ -12,10 +12,6 @@ export class AppComponent implements OnInit {
   constructor(private appService: AppService) { }
 
   ngOnInit(): void {
-    this.setCommonData();
   }
-
-  setCommonData() {
-    this.appService.setCommonData();
-  }
+  
 }

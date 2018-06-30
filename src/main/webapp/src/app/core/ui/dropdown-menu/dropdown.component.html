@@ -1,8 +1,21 @@
-<button mat-button [matMenuTriggerFor]="menu">
-    {{itemsSource.name}}
-</button>
-<mat-menu #menu="matMenu">
-    <button mat-menu-item *ngFor="let item of itemsSource.items">
-        {{item.label}}
-    </button>
-</mat-menu>
+<ng-container *ngFor="let topic of topics">
+    <ng-template *ngIf="topic.items.length == 0; then case1; else case2">
+    </ng-template>
+
+    <ng-template #case1>
+        <button mat-button>
+            {{topic.name}}
+        </button>
+    </ng-template>
+
+    <ng-template #case2>
+        <button mat-button [matMenuTriggerFor]="menu">
+            {{topic.name}}
+        </button>
+        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+            <button mat-menu-item *ngFor="let item of topic.items">
+                <a href='#'>{{item.label}}</a>
+            </button>
+        </mat-menu>
+    </ng-template>
+</ng-container>

@@ -1,14 +1,14 @@
 import { Component, Input, OnChanges, HostListener, ViewChild } from '@angular/core';
 import { dropdownItem } from './dropdown.class';
 import { MatMenuTrigger } from '@angular/material';
-import { TreatmentItems } from '../../interface/interface';
+import { Topic } from '../../interface/Topic';
 
 /**
  * @title Menu with icons
  */
 @Component({
     selector: 'dropdown-menu',
-    inputs: ['items'],
+    inputs: ['topics'],
     templateUrl: 'dropdown.component.html',
     styleUrls: ['dropdown.component.css']
 })
@@ -16,13 +16,13 @@ export class DropdownComponent {
 
     @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
-    @Input() itemsSource: TreatmentItems;
+    @Input() topics: Topic[];
 
-    // 滑鼠移到上方自動打開Menu
+    //滑鼠移到上方自動打開Menu
     // @HostListener('mousemove', ['$event'])
     // onMousemove(event: MouseEvent) {
-    //     this.trigger.openMenu();
-    // }
+    //    this.trigger.openMenu();
+    //}
 
 }
 

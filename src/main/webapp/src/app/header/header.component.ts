@@ -1,24 +1,25 @@
 import { HeaderService } from './header.service';
-import { Component, ElementRef, Inject, OnInit, OnDestroy } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
+import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
-import { TreatmentItems } from '../core/interface/interface';
+import { Topic } from '../core/interface/Topic';
+import LoggerService from '../core/logger/logger.Service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  providers: [AppService, HeaderService]
+  providers: [AppService, HeaderService, LoggerService]
 })
 export class HeaderComponent implements OnInit {
 
-  public treatmentItems: TreatmentItems;
+  public topics: Topic[];
 
-  constructor(private appService: AppService, private headerService: HeaderService) { }
+  constructor(private headerService: HeaderService, private logger:LoggerService) { }
 
   ngOnInit(): void {
-    this.treatmentItems = this.appService.getItemsSource();
+    this.topics = this.headerService.getTopics();
     this.registerScrollFixedHeaderEvent();
+    this.logger.log(this.topics)
   }
 
 
