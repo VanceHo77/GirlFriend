@@ -2,7 +2,7 @@
   <div class="container">
     <div class="brand">
       <h1 class="brand_name">
-        <a href="./" >温老師</a>
+        <a href="./">温老師</a>
       </h1>
       <p class="brand_slogan">物理治療所</p>
     </div>
@@ -11,9 +11,31 @@
   </div>
   <div id="header" class="stuck_container">
     <div class="container">
-      <nav class="nav">
-        <dropdown-menu [topics]='topics'></dropdown-menu>
-      </nav>
+      <div class="grid_9">
+        <nav class="nav">
+          <dropdown-menu [topics]='topics'></dropdown-menu>
+        </nav>
+      </div>
+      <div class="grid_2">
+        <form>
+          <mat-form-field class="searchText">
+            <input type="text" placeholder="Search..." aria-label="search" matInput [formControl]="searchCtrl" [matAutocomplete]="auto">
+
+            <button *ngIf="searchCtrl.value" mat-button matSuffix mat-icon-button aria-label="clear" title="clear" (click)="clearSearchText()">
+              <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <button mat-button matSuffix mat-icon-button aria-label="search" title="search" (click)="doSearch()">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of options" [value]="option.joke">
+                {{ option.joke }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      </div>
     </div>
   </div>
 </header>
