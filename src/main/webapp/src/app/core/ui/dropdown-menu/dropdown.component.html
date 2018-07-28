@@ -3,9 +3,11 @@
     </ng-template>
 
     <ng-template #case1>
-        <button mat-button>
-            {{topic.name}}
-        </button>
+        <a routerLink="{{topic.link}}">
+            <button mat-button>
+                {{topic.name}}
+            </button>
+        </a>
     </ng-template>
 
     <ng-template #case2>

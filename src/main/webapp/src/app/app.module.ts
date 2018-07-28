@@ -44,6 +44,7 @@ import {
   MatStepperModule,
 } from '@angular/material';
 import { OwlModule } from 'ngx-owl-carousel';
+import { AboutUsComponentComponent } from './items/about-us-component/about-us-component.component';
 
 @NgModule({
   exports: [
@@ -78,7 +79,8 @@ import { OwlModule } from 'ngx-owl-carousel';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-  ]
+  ],
+  declarations: [AboutUsComponentComponent]
 })
 export class PlunkerMaterialModule { }
 

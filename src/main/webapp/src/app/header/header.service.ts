@@ -12,7 +12,7 @@ export class HeaderService {
     let topics: Topic[] = [];
     let topic: Topic;
     let items: dropdownItem[] = [];
-    topic = { name: "關於我們", items: items };
+    topic = { name: "關於我們", link: "./aboutUs", items: items };
     topics[0] = topic;
     items = [];
     topic = { name: "最新公告", items: items };
