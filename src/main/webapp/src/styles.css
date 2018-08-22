@@ -25,3 +25,7 @@ a:link, a:visited, a:hover {
 p {
     text-indent: 2em;
 }
+
+.gridText {
+    text-indent: 0em;
+}
