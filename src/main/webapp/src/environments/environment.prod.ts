@@ -1,4 +1,4 @@
-import { LogLevel } from "src/environments/LogLevel";
+import { LogLevel } from "./LogLevel";
 
 export const environment = {
   production: true,

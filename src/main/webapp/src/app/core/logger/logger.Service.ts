@@ -1,5 +1,5 @@
-import { environment } from "src/environments/environment";
-import { LogLevel } from "src/environments/LogLevel";
+import { environment } from "../../../environments/environment";
+import { LogLevel } from "../../../environments/LogLevel";
 
 export default class LoggerService {
     trace(obj: any) {

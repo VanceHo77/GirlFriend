@@ -1,4 +1,4 @@
-import { LogLevel } from "src/environments/LogLevel";
+import { LogLevel } from "./LogLevel";
 
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.

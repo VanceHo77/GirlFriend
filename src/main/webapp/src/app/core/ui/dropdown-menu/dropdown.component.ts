@@ -1,5 +1,4 @@
-import { Component, Input, OnChanges, HostListener, ViewChild } from '@angular/core';
-import { dropdownItem } from './dropdown.class';
+import { Component, Input, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material';
 import { Topic } from '../../interface/Topic';
 
