@@ -2,14 +2,18 @@ import { IndexComponent } from './index/index.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { Router, Routes, RouterModule } from '@angular/router';
-import { AboutUsComponentComponent } from './items/about-us-component/about-us-component.component';
+import { AboutUsComponent } from './items/about-us/about-us.component';
+import { NewsComponent } from './items/news/news.component';
 
 const routes: Routes = [
   {
     path: '', component: IndexComponent
   },
   {
-    path: 'aboutUs', component: AboutUsComponentComponent
+    path: 'aboutUs', component: AboutUsComponent
+  },
+  {
+    path: 'news', component: NewsComponent
   },
   {
     path: '**', redirectTo: '', pathMatch: 'full'

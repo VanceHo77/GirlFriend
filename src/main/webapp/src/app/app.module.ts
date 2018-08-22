@@ -6,10 +6,16 @@ import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IndexComponent } from './index/index.component';
 import { DropdownComponent } from './core/ui/dropdown-menu/dropdown.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// Reference: https://www.npmjs.com/package/angular-mgl-timeline
+import { MglTimelineModule } from 'angular-mgl-timeline';
+// Reference: https://www.npmjs.com/package/ngx-owl-carousel
+import { OwlModule } from 'ngx-owl-carousel';
+import { AboutUsComponent } from './items/about-us/about-us.component';
+import { NewsComponent } from './items/news/news.component';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -43,8 +49,6 @@ import {
   MatTooltipModule,
   MatStepperModule,
 } from '@angular/material';
-import { OwlModule } from 'ngx-owl-carousel';
-import { AboutUsComponentComponent } from './items/about-us-component/about-us-component.component';
 
 @NgModule({
   exports: [
@@ -80,7 +84,7 @@ import { AboutUsComponentComponent } from './items/about-us-component/about-us-c
     MatToolbarModule,
     MatTooltipModule,
   ],
-  declarations: [AboutUsComponentComponent]
+  declarations: []
 })
 export class PlunkerMaterialModule { }
 
@@ -94,11 +98,15 @@ export class PlunkerMaterialModule { }
     HeaderComponent,
     FooterComponent,
     IndexComponent,
+    // items
+    AboutUsComponent, 
+    NewsComponent
   ],
   imports: [
     // UI
     PlunkerMaterialModule,
     BrowserAnimationsModule,
+    MglTimelineModule,
     // App
     BrowserModule,
     FormsModule,
@@ -111,6 +119,7 @@ export class PlunkerMaterialModule { }
     OwlModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

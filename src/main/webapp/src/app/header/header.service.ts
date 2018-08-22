@@ -15,7 +15,7 @@ export class HeaderService {
     topic = { name: "關於我們", link: "./aboutUs", items: items };
     topics[0] = topic;
     items = [];
-    topic = { name: "最新公告", items: items };
+    topic = { name: "最新公告", link: "./news", items: items };
     topics[1] = topic;
     items = [];
     items[0] = { label: '五十肩' };
