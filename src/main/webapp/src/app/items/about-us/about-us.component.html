@@ -36,38 +36,15 @@
             <strong>優秀的團隊</strong>
           </h3>
           <div class="row">
-            <div class="grid_6 wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
-              <div class='grid_2'>
-                <img src="assets/images/aboutUs/staff-1.jpg" alt="">
+            <ng-container *ngFor="let presonal of goodTeams">
+              <div class="off1 grid_6 wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+                <div class='grid_2'>
+                  <img src="{{presonal.imgUrl}}" alt="">
+                </div>
+                <div class='grid_3' [innerHTML]="presonal.description">
+                </div>
               </div>
-              <div class='grid_3'>
-                <p>1</p>
-              </div>
-            </div>
-            <div data-wow-delay="0.2s" class="off1 grid_6 wow fadeInRight animated" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInRight;">
-              <div class='grid_2'>
-                <img src="assets/images/aboutUs/staff-2.jpg" alt="">
-              </div>
-              <div class='grid_3'>
-                <p>2</p>
-              </div>
-            </div>
-            <div data-wow-delay="0.4s" class="off1 grid_6 wow fadeInRight animated" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
-              <div class='grid_2'>
-                <img src="assets/images/aboutUs/staff-3.jpg" alt="">
-              </div>
-              <div class='grid_3'>
-                <p>3</p>
-              </div>
-            </div>
-            <div data-wow-delay="0.6s" class="off1 grid_6 wow fadeInRight animated" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
-              <div class='grid_2'>
-                <img src="assets/images/aboutUs/staff-4.jpg" alt="">
-              </div>
-              <div class='grid_3'>
-                <p>4</p>
-              </div>
-            </div>
+            </ng-container>
           </div>
         </div>
       </div>

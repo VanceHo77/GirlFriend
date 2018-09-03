@@ -1,14 +1,11 @@
 /* bootstrap*/
-
 @import url("/assets/bootstrap-3.3/css/bootstrap.min.css");
 @import url("/assets/css/grid.css");
 @import url("/assets/css/style.css");
 /* 輪播器*/
-
 @import url("../node_modules/owl.carousel/dist/assets/owl.carousel.css");
 @import url("../node_modules/owl.carousel/dist/assets/owl.theme.default.css");
 /* material*/
-
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 body {
     font-family: Microsoft JhengHei;
@@ -20,10 +17,6 @@ a:link, a:visited, a:hover {
 
 .btn:hover {
     color: white;
-}
-
-p {
-    text-indent: 2em;
 }
 
 .gridText {

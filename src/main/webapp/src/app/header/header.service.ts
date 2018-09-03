@@ -6,8 +6,6 @@ import { dropdownItem } from '../core/ui/dropdown-menu/dropdown.class';
 @Injectable()
 export class HeaderService {
 
-  public topics: Topic[];
-
   public getTopics(): Topic[] {
     let topics: Topic[] = [];
     let topic: Topic;
