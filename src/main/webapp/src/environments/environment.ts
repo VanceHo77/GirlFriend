@@ -6,7 +6,7 @@ import { LogLevel } from "./LogLevel";
 
 export const environment = {
   production: false,
-  sourceUrl: "localhost:8080/girlfirend/api",
+  sourceUrl: "http://localhost:8080/girlfirend/api",
   logLevel: LogLevel.Log
 };
 
