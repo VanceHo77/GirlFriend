@@ -10,6 +10,6 @@ Give my favorite girlfriend a website.
   - Webpack:4.8.3
   - Bootstrap-customize:3.3
   - SpringBoot:2.1.0
-  - Kotlin:1.2.41
+  - Kotlin:1.2.71
   
 ## Website Template:https://www.templatemonster.com/demo/55108.html
