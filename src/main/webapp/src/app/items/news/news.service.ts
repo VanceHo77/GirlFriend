@@ -5,7 +5,7 @@ import { Http } from '@angular/http'
 import { RequestOptions } from '@angular/http'
 import { environment } from './../../../environments/environment'
 
-const SourceUrl: string = environment.sourceUrl + '/news/search/findTop10ByOrderByModifyTimeDesc'
+const SourceUrl: string = environment.sourceUrl + '/news?page=0&size=10&sort=modifyTime,desc'
 
 @Injectable()
 export class NewsService {
